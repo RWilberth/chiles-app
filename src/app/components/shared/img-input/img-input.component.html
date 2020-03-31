@@ -1,0 +1,17 @@
+<div class="input-file-wraooer" id="myId">
+    <div class="input-file">
+        <input name="images" type="file" id="imagen" multiple accept="image/*" (change)="changeListener($event)" />
+    </div>
+    <div class="row">
+        <div class="col-xl-3 col-md-12 xol-sm-12 col-xs-12" *ngFor="let image of images;">
+
+            <div class="card">
+                
+                <img src="{{image}}" class="card-img-top img-thumbnail" />
+                <div class="card-body">
+                  <button type="button" (click)="deleteFile($event, image)" class="btn btn-danger">Eliminar</button>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

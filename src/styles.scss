@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+html,body{
+    height: 100%;
+}
+
+.main-layout > :nth-child(2) {
+    width: 100% !important;
+}
+
+.center-text{
+    text-align: center;
+}

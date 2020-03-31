@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 center-text">
+            <h1>Administador de productos</h1>
+        </div>
+    </div>
+    <div class="row mb-1">
+        <div class="col-12">
+            <a [routerLink]="['/admin/product/add']"  class="btn btn-success float-right">Nuevo producto</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <app-product-list [products]="products"></app-product-list>
+        </div>
+    </div>
+</div>

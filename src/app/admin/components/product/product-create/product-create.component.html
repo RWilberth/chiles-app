@@ -1,0 +1,33 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-12 center-text">
+            <h1>Registrar producto</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <form enctype="multipart/form-data" id="createForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" aria-describedby="Nombre"
+                        placeholder="Ingresa el nombre del producto">
+                </div>
+
+                <div class="form-group">
+                    <label for="shortDescription">Descripción corta</label>
+                    <textarea class="form-control" id="shortDescription" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="longDescription">Descripción larga</label>
+                    <textarea class="form-control" id="longDescription" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <app-img-input [(images)]="images"></app-img-input>
+                </div>
+                <button type="submit" class="btn btn-primary float-right">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>

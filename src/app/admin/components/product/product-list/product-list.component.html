@@ -1,0 +1,30 @@
+<div *ngIf="areProductsEmpty();then content else empty_content"></div>
+<ng-template #content>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Fecha de registro</th>
+                    <th>Fecha de ultima modificación</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <td>{{product.name}}</td>
+                    <td>{{product.createdAt}}</td>
+                    <td>{{product.updatedAt}}</td>
+                    <td>
+                        <button class="btn btn-primary">Editar</button>
+                        <button class="btn btn-warning">Ver detalle</button>
+                        <button class="btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</ng-template>
+<ng-template #empty_content>
+    <p class="alert alert-danger">No hay productos en la lista</p>
+</ng-template>
